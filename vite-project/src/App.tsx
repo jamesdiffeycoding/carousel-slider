@@ -1,6 +1,6 @@
 import './App.css'
 import Links from './components/Links'
-import RecentProjects from './components/RecentProjects'
+import RecentProjectsCarousel from './components/RecentProjectsCarousel'
 function App() {
 
   return (
@@ -10,7 +10,7 @@ function App() {
             <div className="menu-container">
                 <h1 className="calligraphy-font primaryfontcol">James Diffey</h1>
                 <Links></Links>
-                <RecentProjects></RecentProjects>
+                <RecentProjectsCarousel></RecentProjectsCarousel>
             </div>
         </div>
     </div>
