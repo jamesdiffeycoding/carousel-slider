@@ -11,6 +11,7 @@ function App() {
                 <h1 className="calligraphy-font primaryfontcol">James Diffey</h1>
                 <Links></Links>
                 <RecentProjects></RecentProjects>
+
             </div>
         </div>
     </div>
