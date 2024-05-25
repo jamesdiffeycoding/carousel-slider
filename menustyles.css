@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('path/to/lora.woff2') format('woff2'),
+         url('path/to/lora.woff') format('woff');
+}
+/* ENTIRE OVERLAY------------------------------------- */
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    text-align: center;
+    background-image: url('lilypadoverlay.png');
+    z-index: 10;
+    display: flex; /* Add flex display to center content */
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+/* THE BLACK MENU BOX ------------------------------- */
+.menu-container {
+    background-color: rgba(51, 51, 51, 0.8); /* Dark background color with 70% opacity */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Rounded corners for buttons */
+    padding: 1rem;
+    
+}
+
+
+/* THE HEADING ------- */
+.calligraphy-font {
+    font-family: 'Great Vibes', cursive; /* Apply the calligraphy font */
+}
+
+h1 {
+    /* font-weight: normal */
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    padding: 1rem;
+    padding-top: 0rem;
+    
+}
+
+/* THE LINKS FLEX BOX ---------------------------------*/
+.links-container {
+    display: flex; /* Use flexbox for the menu container */
+    justify-content: center; /* Center the items horizontally */
+}
+
+
+.links-item {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    background-color: rgba(130, 130, 130, 1);     /* padding: 10px 20px; Padding for the buttons */
+    margin: 5px; /* Add margin between buttons */
+    border-radius: 20px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    padding: 0.5rem;
+}
+
+
+.links-item svg {
+    width: 30px; /* Set the width of the SVG icons */
+    height: 30px; /* Set the height of the SVG icons */
+    fill: currentColor; /* Use the current text color as the fill color for the SVG icons */
+}
+
+
+.links-item:hover {
+    background-color: #777; /* Darker background color on hover */
+}
+
+
+
+a {
+    text-align: center;
+    align-content: center;
+}
+
+/* PROJECTS CONTAINER --------------- */
+.recentprojecttitle {
+    font-size: 3rem;
+}
+.projects-container {
+    padding-top: 2rem;
+    text-align: left;
+    min-width: 800px;
+    
+}
+
+h4 { 
+    font-weight: normal;
+    font-size: 2em;
+    font-family: 'Lora', cursive; /* Apply the calligraphy font */
+}
+.project-title {
+    font-size: 1.3rem;
+    padding-block: 0.5rem;
+}
+
+.project-box {
+    border-top: 1px solid white;
+    display: grid;
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 20px;
+    grid-template-columns: 40% 60%;    
+    max-width: 1000px;
+    padding: 2rem;
+
+}
+
+.project-image {
+    background-image: url('Project-screenshots/AwesunShot2.png');
+    position: relative;
+    border: 1px solid white;
+  }
+  
+.arrow {
+    position: absolute;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    width: 30px;
+    position: absolute; /* Position the arrows absolutely within the container */
+    top: 50; /* Position the arrows at the top of the container */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255,0.1);     /* padding: 10px 20px; Padding for the buttons */
+}
+  
+.left-arrow{
+left: 0px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+.right-arrow{
+right: 0px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+
+}
+
+
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255,0.3);     /* padding: 10px 20px; Padding for the buttons */
+}
+
+
+.project-box p, .project-box span {
+    font-size: 0.8rem;
+}
+.project-sub-heading {
+    font-family: Lora
+}
+
+.primaryfontcol {
+    color: white;
+}
+.secondaryfontcol{
+    color: rgb(255, 255, 255)
+}
+
+.subsection {
+    padding-block: 0.3rem
+}
