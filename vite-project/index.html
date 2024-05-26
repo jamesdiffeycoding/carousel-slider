@@ -2,27 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Diffey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Add the calligraphy font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
+    <!-- start: FONT IMPORTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Add the calligraphy font -->
+    <!-- end: FONT IMPORTS -->
+
+    <!-- start: JQUERY RIPPLE EFFECT IMPORTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <!-- end: JQUERY RIPPLE EFFECT IMPORTS -->
 
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- start: JQUERY RIPPLE EFFECT -->
     <script>
       $(document).ready(function() {
-          $('.lilypad').ripples({
+          $('.lilypad-and-water-background').ripples({
               resolution: 600,
               perturbance: 0.001,
               dropRadius: 50
           })
       });
   </script>
+    <!-- end: JQUERY RIPPLE EFFECT -->
+
   </body>
 </html>
