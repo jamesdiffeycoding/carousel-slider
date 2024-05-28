@@ -87,7 +87,6 @@ const recentProjectsData = [
         value3: "A variety.",
         heading4: "LEARNINGS",
         value4: "Every project completed is another repetition. Each leaves me a bit more aware how to approach similar tasks in the future.",
-    }
+    },
 ];
-    
     export default recentProjectsData
