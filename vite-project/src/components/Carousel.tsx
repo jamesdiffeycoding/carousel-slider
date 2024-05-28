@@ -6,7 +6,7 @@ export default function Carousel () {
     const [chosenCarouselString, setChosenCarouselString] = useState("projects")
     const [tooltip, setTooltip] = useState(true)
 
-    const [scrollDistance, setScrollDistance] = useState(window.innerWidth); // Initialize scrollDistance using useState
+    const [scrollDistance, setScrollDistance] = useState(Math.min(window.innerWidth, 1000)); // Initialize scrollDistance using useState
     const crslRef = useRef<HTMLDivElement>(null);
 
     const handleNewToggle = () => {
@@ -105,7 +105,7 @@ export default function Carousel () {
             <section className="tooltip-container"> 
                 {tooltip && (
                     <div className="tooltip">
-                        <span className="project-sub-heading">TOOLTIP: </span>To learn more about my work, use the arrows or swipe through the carousel below. If you have questions (or notice any responsiveness/accessibility issues), please let me know.
+                        <span className="project-sub-heading">TOOLTIP: </span>To learn more about my work, use the arrows or swipe through the carousel.
                         <span className="tooltip-X button-style-and-hover" onClick={(() => closeTooltip())}>X</span>
                     </div>
                 )}    
