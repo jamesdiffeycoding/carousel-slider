@@ -42,6 +42,9 @@ export default function Carousel () {
         };
     }, []);
 
+
+    
+
     let leftArrowSymbol="<"
     let rightArrowSymbol=">"
 
@@ -65,6 +68,23 @@ export default function Carousel () {
         setChosenCarouselString(chosenGraph)
     }
 
+    type itemStructure = {
+        title: string;
+        information: string;
+        fileName: string;
+        heading1?: string;
+        value1?: string;
+        heading2?: string;
+        value2?: string;
+        heading3?: string;
+        value3?: string;
+        heading4?: string;
+        value4?: string;
+        heading5?: string;
+        value5?: string;
+        url?: string; // "?" makes property optional
+    };
+
 
     return (
         <section className="projects-container">
@@ -76,7 +96,7 @@ export default function Carousel () {
                 <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("history")}>INSPIRATION</span>
             </div>
             <div className="crsl" ref={crslRef}>
-                {chosenCarouselData.map((item, index) => (
+                {chosenCarouselData.map((item: itemStructure, index) => (
                     <section className="crsl-item" key={index}>
                         {index !== 0 ? <div className="crsl-arrow crsl-arrow-left button-style-and-hover" onClick={() => handleLeftArrowClick()}>{leftArrowSymbol}</div> : null}
                         {index !== chosenCarouselData.length - 1 ? <div className="crsl-arrow crsl-arrow-right button-style-and-hover" onClick={() => handleRightArrowClick()}>{rightArrowSymbol}</div> : null}
@@ -113,7 +133,7 @@ export default function Carousel () {
                                 <span className="project-information ">{item.value5}</span>
                             </div>
                             )}    
-                            {item.url.length>=3 && (
+                            {item.url && (
                                 <div className="subsection">
                                     <span className="project-sub-heading">URL: </span>
                                     <a href={item.url} className="project-information" target="_blank" rel="noopener noreferrer">

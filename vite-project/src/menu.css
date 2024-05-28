@@ -4,7 +4,7 @@ margin-inline: 5%; /* small screens only */
 }
 
 .black-menu-container {
-background-color: rgba(51, 51, 51, 0.8); /* Dark background color with 70% opacity */
+background-color: rgba(51, 51, 51, 0.5); /* Dark background color with 70% opacity */
 border: 1px solid #ccc;
 border-radius: 20px; /* Rounded corners for buttons */
 padding: 0.5rem;
@@ -107,8 +107,12 @@ display: none;
 
 .crsl-project-title {
 font-size: 1.5rem;
-color: rgb(112, 250, 112);
 padding-block: 0.5rem;
+}
+
+.project-sub-heading, .crsl-project-title {
+  color: rgb(175, 245, 175);
+
 }
 
 .crsl-lhs-information {
@@ -165,7 +169,6 @@ font-size: 1rem;
 
 .project-sub-heading {
 font-family: Lora;
-color: rgb(112, 250, 112);
 font-weight: bold;
 }
 .project-information{
