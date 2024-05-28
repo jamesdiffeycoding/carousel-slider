@@ -28,13 +28,7 @@ export default function Carousel () {
     };
 
     const calculateScrollDistance = () => {
-        const viewportWidth = window.innerWidth;
-        if(viewportWidth<=2000) {
-            setScrollDistance(viewportWidth)
-        } else {
-            setScrollDistance(2000)
-        }
-        return viewportWidth;
+        setScrollDistance(Math.min(window.innerWidth, 1000))
     };
 
     useEffect(() => {
