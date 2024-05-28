@@ -1,67 +1,68 @@
+
 .black-menu-placement-styles {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+margin-inline: 5%; /* small screens only */
 }
 
 .black-menu-container {
-    background-color: rgba(51, 51, 51, 0.8); /* Dark background color with 70% opacity */
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Rounded corners for buttons */
-    padding: 0.5rem;
+background-color: rgba(51, 51, 51, 0.8); /* Dark background color with 70% opacity */
+border: 1px solid #ccc;
+border-radius: 20px; /* Rounded corners for buttons */
+padding: 0.5rem;
 
-    /* RESPONSIVE WIDTH SIZING */
-    width: 90%;
-    
-    /* PLACING CONTENT WITHIN IT */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+/* RESPONSIVE WIDTH SIZING */
+width: 90%;
+max-width: 1200px;
+
+/* PLACING CONTENT WITHIN IT */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
 }
 
 .black-menu-font-james-diffey {
-    /* font-weight: normal */
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
-    padding: 1rem;
-    font-family: 'Great Vibes', cursive; /* Apply the calligraphy font */
+color: rgb(255, 255, 255);
+font-size: 3rem;
+padding: 1rem;
+font-family: 'Great Vibes', cursive; /* Apply the calligraphy font */
 }
 
 /* LINKS */
 .links-container {
-    display: flex; /* Use flexbox for the menu container */
-    justify-content: center; /* Center the items horizontally */
-    padding-bottom: 1rem;
+display: flex; /* Use flexbox for the menu container */
+justify-content: center; /* Center the items horizontally */
+padding-bottom: 1rem;
 }
 
 .links-item {
-    color: white;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-decoration: none;
-    margin: 5px; /* Add margin between buttons */
-    border-radius: 20px; /* Rounded corners for buttons */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-    padding: 0.5rem;
+color: white;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+align-content: center;
+text-decoration: none;
+margin: 5px; 
+border-radius: 20px; 
+transition: background-color 0.3s; 
+padding: 0.5rem;
 }
-  
+
 .links-item svg {
-    width: 30px; /* Set the width of the SVG icons */
-    height: 30px; /* Set the height of the SVG icons */
-    fill: currentColor; /* Use the current text color as the fill color for the SVG icons */
+width: 30px; 
+height: 30px; 
+fill: currentColor; 
 }
-  
+
 
 /* CAROUSEL */
+.toggles {
+  margin-block: 1rem;
 
-.recent-projects-title {
-font-size: 1.5em;
+}
+.toggles-title {
+  padding: 0.3rem;
+font-size: 2em;
 font-weight: normal;
 font-style: italic;
 color:blanchedalmond;
@@ -77,11 +78,11 @@ overflow-x: scroll; /* or overflow-x: auto; */
 scroll-behavior: smooth;
 scroll-snap-type: x mandatory;
 }
-  
+
 .crsl-item {
 border-block: 2px solid white;
-color:antiquewhite;
-background-color: rgba(0, 0, 0, 0.5); /* Dark background color with 70% opacity */
+color:white;
+background-color: rgba(0, 0, 0, 0.5); 
 
 /* background-color: red; */
 display: grid;
@@ -93,22 +94,23 @@ grid-template-columns: 100%;
 min-width: 100%;
 /* margin: 2rem; */
 padding: 1rem;
-height:100%;
+/* height:100%; */
 scroll-snap-align: start;
 box-sizing: border-box;
 }
-  
-  
+
+
 .crsl::-webkit-scrollbar {
 display: none;
 }
-  
+
 
 .crsl-project-title {
-font-size: 1.3rem;
+font-size: 1.5rem;
+color: rgb(112, 250, 112);
 padding-block: 0.5rem;
 }
-  
+
 .crsl-lhs-information {
 margin-left: 2.5%;
 width: 95%;
@@ -120,80 +122,95 @@ background-image: url('../AwesunShotBanner.png');
 background-size: cover;
 position: relative;
 border: 1px solid white;
-height: 280px;
-margin-left: 2.5%;
+margin-left: 2.5%; /* small screens only */
 width: 95%;
+}
+
+
+
+/* ARROWS */
+.crsl-arrow {
+position: absolute;
+transition: background-color 0.3s; /* Smooth transition on hover */
+width: 2.5%;
+position: absolute; /* Position the arrows absolutely within the container */
+top: 50; /* Position the arrows at the top of the container */
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+
+.crsl-arrow-left{
+left: 0px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+.crsl-arrow-right{
+right: 0px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+
+
+
+/* FONTS AND COLOURS */
+
+.crsl p, .crsl span, .crsl a {
+font-size: 1rem;
+}
+
+.project-sub-heading {
+font-family: Lora;
+color: rgb(112, 250, 112);
+font-weight: bold;
+}
+.project-information{
+color: white;
 
 }
-  
 
 
-  /* ARROWS */
-  .crsl-arrow {
-    position: absolute;
-    transition: background-color 0.3s; /* Smooth transition on hover */
-    width: 2.5%;
-    position: absolute; /* Position the arrows absolutely within the container */
-    top: 50; /* Position the arrows at the top of the container */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-  
-  
-  .crsl-arrow-left{
-  left: 0px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  }
-  .crsl-arrow-right{
-  right: 0px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  }
-  
-
-
-
-  /* FONTS AND COLOURS */
- 
-  .crsl p, .crsl span, .crsl a {
-    font-size: 0.8rem;
-  }
-
-  .project-sub-heading {
-    font-family: Lora;
-    font-weight: bold;
-  }
-  .project-information{
-    color: antiquewhite;
-
-  }
-
-  
-  .subsection {
-    padding-block: 0.3rem
-  }
-  
-  .button-style-and-hover {
-    background-color: rgba(255, 255, 255,0.1);  
-    transition: background-color 0.3s; /* Smooth transition on hover */
-  }
-  .button-style-and-hover:hover {
-    background-color: rgba(255, 255, 255,0.3);     /* padding: 10px 20px; Padding for the buttons */
-  }
-  
-
-  @media only screen and (min-width: 800px) {    
-    .crsl-item {
-        grid-template-columns: 50% 50%;  
-        grid-column-gap: 1rem;
-    }
-    .crsl-rhs-project-image {
-      margin-left: 0%;
-      margin-right: 2.5%;
-    }
-        
+.subsection {
+padding-block: 0.3rem
 }
+
+.button-style-and-hover {
+background-color: rgba(255, 255, 255,0.1);  
+border-radius: 10px;
+transition: background-color 0.3s; /* Smooth transition on hover */
+}
+.button-style-and-hover:hover {
+background-color: rgba(255, 255, 255,0.3);     /* padding: 10px 20px; Padding for the buttons */
+}
+
+/*  From 800px wide screens upwards, the carousel item has two columns */
+@media only screen and (min-width: 800px) {    
+.crsl-item {
+    grid-template-columns: 35% 65%;  
+    grid-column-gap: 1rem;
+}
+.crsl-rhs-project-image {
+  margin-left: 0%;
+  margin-right: 2.5%;
+}
+}
+
+
+/* Small screen iPhone SE type devices can't fit much on the screen. */
+@media only screen and (min-width: 400px) and (min-height: 840px) {
+.black-menu-placement-styles {
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+align-content: center;
+margin-inline: 0%;
+}
+}
+
+
+

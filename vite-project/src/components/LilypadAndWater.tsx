@@ -1,5 +1,5 @@
 import Links from "./Links"
-import RecentProjectscrsl from "./RecentProjectsCarousel"
+import Carousel from "./Carousel"
 
 export default function LilypadAndWater () {
 
@@ -10,7 +10,7 @@ export default function LilypadAndWater () {
                 <h1 className="black-menu-font-james-diffey">James Diffey</h1>
                 <Links></Links>
                 <hr></hr>
-                <RecentProjectscrsl></RecentProjectscrsl>
+                <Carousel></Carousel>
             </div>
         </div>
     </div>      

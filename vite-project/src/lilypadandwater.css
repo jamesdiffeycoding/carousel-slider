@@ -1,17 +1,29 @@
 .lilypad-and-water-background {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-color: rgb(10, 136, 161); /* water-like background colour during loading*/
-  background-image: url('../lilypad.png');
-  position: absolute;
+  background-image: url('../lilypad.png');  
 }
 
 .lilypad-overlay {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-image: url('../lilypadoverlay.png');
-  position: absolute;
   z-index: 10; /* z-index to ensure lilypad on front-layer above ripples*/
+}
+
+
+/* Small screen iPhone SE type devices can't fit much on the screen. */
+@media only screen and (min-width: 400px) and (min-height: 840px) {
+  .lilypad-and-water-background {
+    height: 100vh;
+    position: absolute
+  }
+  
+  .lilypad-overlay {
+    height: 100vh;
+    position: absolute
+  }  
 }
