@@ -1,9 +1,11 @@
 import { useRef, useState, useEffect } from 'react';
 import recentProjectsData from "./recentProjectsData";
-import workHistoryData from './workHistoryData';
+import inspirationData from './inspirationData';
 import skillsData from './skillsData';
 export default function Carousel () {
     const [chosenCarouselString, setChosenCarouselString] = useState("projects")
+    const [tooltip, setTooltip] = useState(true)
+
     const [scrollDistance, setScrollDistance] = useState(window.innerWidth); // Initialize scrollDistance using useState
     const crslRef = useRef<HTMLDivElement>(null);
 
@@ -53,8 +55,8 @@ export default function Carousel () {
         case "projects":
             chosenCarouselData = recentProjectsData;
             break;
-        case "history":
-            chosenCarouselData = workHistoryData;
+        case "inspiration":
+            chosenCarouselData = inspirationData;
             break;
         case "skills":
             chosenCarouselData = skillsData;
@@ -85,16 +87,30 @@ export default function Carousel () {
         url?: string; // "?" makes property optional
     };
 
+    function closeTooltip () {
+        setTooltip(false)
+
+    }
+
 
     return (
         <section className="projects-container">
-            <div className="toggles">
-                <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("projects")}>PROJECTS</span>
-                <span className="toggles-dot"> • </span>
-                <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("skills")}>SKILLS</span>
-                <span className="toggles-dot"> • </span>
-                <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("history")}>INSPIRATION</span>
-            </div>
+                <div className="toggles">
+                    <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("projects")}  style={{ backgroundColor: chosenCarouselString === "projects" ? "rgba(170, 128, 255,0.5)" : "rgba(255, 255, 255,0.1)" }}>PROJECTS</span>
+                    <span className="toggles-dot"> • </span>
+                    <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("skills")} style={{ backgroundColor: chosenCarouselString === "skills" ? "rgba(170, 128, 255,0.5)" : "rgba(255, 255, 255,0.1)"}}>SKILLS</span>
+                    <span className="toggles-dot"> • </span>
+                    <span className="toggles-title button-style-and-hover" onClick={() => toggleCarousel("inspiration")} style={{ backgroundColor: chosenCarouselString === "inspiration" ? "rgba(170, 128, 255,0.5)" : "rgba(255, 255, 255,0.1)" }}>INSPIRATION</span>
+                </div>
+            <section className="tooltip-container"> 
+                {tooltip && (
+                    <div className="tooltip">
+                        <span className="project-sub-heading">TOOLTIP: </span>To learn more about my work, use the arrows or swipe through the carousel below. If you have questions (or notice any responsiveness/accessibility issues), please let me know.
+                        <span className="tooltip-X button-style-and-hover" onClick={(() => closeTooltip())}>X</span>
+                    </div>
+                )}    
+            </section>
+
             <div className="crsl" ref={crslRef}>
                 {chosenCarouselData.map((item: itemStructure, index) => (
                     <section className="crsl-item" key={index}>
@@ -144,7 +160,7 @@ export default function Carousel () {
                         </div>
                     <div className="crsl-rhs-project-image" style={{ 
                         backgroundImage: `url('../${item.fileName}')`, 
-                        minHeight: scrollDistance/3 >= 200 ? `${scrollDistance/3}px` : '200px' 
+                        minHeight: scrollDistance/3 >= 200 ? `${Math.min(scrollDistance / 3, 500)}px` : '200px' 
                     }}>
                     </div>
                 </section>
