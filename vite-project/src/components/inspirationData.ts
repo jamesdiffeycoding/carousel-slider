@@ -1,7 +1,7 @@
 const inspirationData =[
             {
                 title: "Tech to solve problems",
-                information: "I have always been interested in technology, but my interest changed as I saw the opportunities and challenges my colleagues had at work.",
+                information: "I have always been interested in technology, but my interest grew as I saw the opportunities and challenges my colleagues had at work.",
                 fileName: "DeploymentsDashboardShot2.png",
                 // url: "https://awesun-solar-visualiser.vercel.app/",
         
