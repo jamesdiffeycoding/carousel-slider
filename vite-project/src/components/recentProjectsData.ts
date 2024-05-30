@@ -1,7 +1,7 @@
 const recentProjectsData = [
     {
         title: "Solar Energy",
-        information: "This 'Awesun' Solar Energy Visualiser displays the latest UK solar energy generation statistics in half-hourly increments. Peak production statistics are included for comparison, and a responsive animation to represent the strength of the sun at different times.",
+        information: "'Awesun' Solar Energy Visualiser displays the latest UK solar energy generation statistics in half-hourly increments. Peak production statistics are included for comparison, and a responsive animation to represent the strength of the sun at different times brings interactivity.",
         fileName: "AwesunShotBanner.png",
         url: "https://awesun-solar-visualiser.vercel.app/",
 
@@ -10,39 +10,39 @@ const recentProjectsData = [
         heading2: "FEATURES",
         value2: "responsiveness, live updates, animations, daily/monthly/yearly views",
         heading3: "COLLABORATORS",
-        value3: "Built in a team of 3 with GitHub used for version control.",
+        value3: "Built in a team of 3 with GitHub used for version control with regular feedback sessions, retrospectives and code-reviews.",
         heading4: "LEARNINGS",
         value4: "humility!",
     },
     {
         title: "Mathemagical",
-        information: "Animating beautiful equations, and providing a trigonemetric 'make your own' graph.",
+        information: "Mathemagical animates beautiful equations, and provides a 'make-your-own-animation' tool.",
         fileName: "MathemagicalShot3.png",
         url: "https://mathemagical.vercel.app/",
 
         heading1: "TECHNOLOGIES",
         value1: "React, TypeScript, HTML canvas",
         heading2: "FEATURES",
-        value2: "responsiveness, fast rendering, create-your-own",
+        value2: "responsiveness, fast rendering, create-your-own-animation",
         heading3: "COLLABORATORS",
         value3: "None.",
         heading4: "LEARNINGS",
-        value4: "There are many ways to code the same thing, often pre-made tools are already available online.",
+        value4: "There are many ways to code the same thing, and often pre-made tools which can help (such as HTML canvas) are already available online.",
     },
     {
         title: "Ruby on Rails CRUD Dex",
-        information: "A simple CRUD-functionality Pokedex App, which was my first project in Ruby on Rails, having worked primarily in React/Next JS thus far.",
+        information: "This application provides a Pokedex App with create, read, update and delete functionality. I challenged myself to build something using Ruby on Rails and this was my first project.",
         fileName: "RubyDexShotBannerShort.png",
         url: "https://rubyonrails-pokedex.onrender.com/pokemonsters",
 
         heading1: "TECHNOLOGIES",
         value1: "Ruby on Rails, CSS",
         heading2: "FEATURES",
-        value2: "CRUD functionality: create, read, update, delete; resetting database",
+        value2: "a modifiable database, default values, and create, read, update, delete functionality",
         heading3: "COLLABORATORS",
         value3: "None.",
         heading4: "LEARNINGS",
-        value4: "Once installed, Ruby on Rails has some scripts that can make project setup a breeze.",
+        value4: "Although setting up Ruby on Rails can be time-consuming, Ruby on Rails offers some command line tools that can siginificantly aid database-setup.",
     },
     {
         title: "Positive Homeless Shelter Database",
@@ -54,7 +54,7 @@ const recentProjectsData = [
         heading2: "FEATURES",
         value2: "authentication, authorisation, testing, database-connectivity",
         heading3: "COLLABORATORS",
-        value3: "Built in a team of 6 with GitHub used for version control.",
+        value3: "Built in a team of 6 with GitHub used for version control with regular feedback sessions, retrospectives and code-reviews.",
         heading4: "LEARNINGS",
         value4: "Don't spent excessive time optimising for use cases you may never need.",
     },
@@ -86,7 +86,7 @@ const recentProjectsData = [
         heading3: "COLLABORATORS",
         value3: "A variety.",
         heading4: "LEARNINGS",
-        value4: "Every project completed is another repetition. Each leaves me a bit more aware how to approach similar tasks in the future.",
+        value4: "Every project completed is another repetition. Each leaves me with more perspective on how best to approach development in the future.",
     },
 ];
     export default recentProjectsData
